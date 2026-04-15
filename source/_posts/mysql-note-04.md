@@ -3,6 +3,10 @@ title: 一周浅谈：InnoDB数据页结构
 date: 2022-06-20T22:51:18+08:00
 tags:
   - Mysql
+  - InnoDB
+categories:
+  - 数据库
+cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop
 ---
 
 ## 不同类型的页

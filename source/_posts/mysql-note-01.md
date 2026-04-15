@@ -3,6 +3,9 @@ title: 一周浅谈：Mysql整体架构设计
 date: 2022-06-01T10:50:55+08:00
 tags:
   - Mysql
+categories:
+  - 数据库
+cover: https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=500&fit=crop
 ---
 
 ## 前言

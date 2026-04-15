@@ -3,6 +3,10 @@ title: 一周浅谈：InnoDB记录存储结构
 date: 2022-06-05T22:51:18+08:00
 tags:
   - Mysql
+  - InnoDB
+categories:
+  - 数据库
+cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop
 ---
 
 ## 前言

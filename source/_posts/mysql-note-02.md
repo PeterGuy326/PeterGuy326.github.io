@@ -3,6 +3,9 @@ title: 一周浅谈：Mysql - 字符集和比较规则
 date: 2022-06-01T22:56:49+08:00
 tags:
   - Mysql
+categories:
+  - 数据库
+cover: https://images.unsplash.com/photo-1515879218367-8466d910aede?w=800&h=500&fit=crop
 ---
 
 ## 前言
