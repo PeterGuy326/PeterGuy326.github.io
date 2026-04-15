@@ -137,6 +137,12 @@ cover:
 # Page transition
 enter_transitions: true
 
+# Inject custom CSS/JS
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+  bottom:
+
 # Preloader
 preloader:
   enable: true
