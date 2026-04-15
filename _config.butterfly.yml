@@ -1,0 +1,122 @@
+# Navigation
+nav:
+  logo:
+  display_title: true
+  fixed: false
+
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+
+# Code Blocks
+highlight_theme: mac light
+highlight_copy: true
+highlight_lang: true
+highlight_height_limit: 300
+
+# Social
+social:
+  fab fa-github: https://github.com/PeterGuy326 || Github
+
+# Avatar
+avatar:
+  img: https://avatars.githubusercontent.com/u/PeterGuy326
+  effect: false
+
+# Aside
+aside:
+  enable: true
+  card_author:
+    enable: true
+    description: 幸好有你雯
+  card_announcement:
+    enable: false
+  card_recent_post:
+    enable: true
+    limit: 5
+  card_categories:
+    enable: true
+  card_tags:
+    enable: true
+  card_archives:
+    enable: true
+
+# Footer
+footer:
+  owner:
+    enable: true
+    since: 2022
+  custom_text:
+  copyright: true
+
+# Post
+post_meta:
+  page:
+    date_type: created
+    categories: true
+    tags: true
+  post:
+    date_type: both
+    categories: true
+    tags: true
+
+toc:
+  post: true
+  page: false
+  number: true
+
+# Post Copyright
+post_copyright:
+  enable: true
+  decode: false
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# Theme color
+theme_color:
+  enable: true
+  main: "#49B1F5"
+
+# Beautify
+beautify:
+  enable: true
+  field: post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: "#F47466"
+
+# Font
+font:
+  global-font-size:
+  code-font-size:
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+
+# Dark mode
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+# Local search
+local_search:
+  enable: false
+
+# Index page
+index_img: false
+default_top_img: false
+archive_img:
+tag_img:
+category_img:
+
+# Post cover
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+
+# Page transition
+enter_transitions: true

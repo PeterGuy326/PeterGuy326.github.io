@@ -1,0 +1,7 @@
+node_modules/
+public/
+db.json
+*.log
+.deploy*/
+.DS_Store
+.claude/
