@@ -28,10 +28,12 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          ls -la node_modules/.bin/hexo
 
       - name: Build
-        run: npx hexo generate
+        run: node_modules/.bin/hexo generate
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
