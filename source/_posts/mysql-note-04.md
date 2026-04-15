@@ -6,7 +6,7 @@ tags:
   - InnoDB
 categories:
   - 数据库
-cover: https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=500&fit=crop
+cover: https://api.maho.cc/random-img/pc.php
 ---
 
 ## 不同类型的页

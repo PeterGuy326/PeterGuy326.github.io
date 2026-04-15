@@ -6,7 +6,7 @@ tags:
   - InnoDB
 categories:
   - 数据库
-cover: https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop
+cover: https://api.maho.cc/random-img/pc.php
 ---
 
 ## 前言

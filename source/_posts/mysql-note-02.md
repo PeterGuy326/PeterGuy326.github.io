@@ -5,7 +5,7 @@ tags:
   - Mysql
 categories:
   - 数据库
-cover: https://images.unsplash.com/photo-1515879218367-8466d910aede?w=800&h=500&fit=crop
+cover: https://api.maho.cc/random-img/pc.php
 ---
 
 ## 前言

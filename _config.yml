@@ -3,13 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 彼得仔の日记
-subtitle: 技术笔记
-description: 幸好有你雯
+title: Peter の 技术小屋
+subtitle: 代码与咖啡的日常
+description: 一个热爱技术的开发者的学习笔记
 keywords:
   - Mysql
   - InnoDB
-author: 彼得仔
+  - 后端开发
+author: Peter
 language: zh-CN
 timezone: Asia/Shanghai
 

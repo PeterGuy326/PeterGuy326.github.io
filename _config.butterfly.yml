@@ -30,7 +30,7 @@ aside:
   enable: true
   card_author:
     enable: true
-    description: 幸好有你雯
+    description: Debug the world, one line at a time.
     button:
       enable: true
       icon: fab fa-github
@@ -38,7 +38,7 @@ aside:
       link: https://github.com/PeterGuy326
   card_announcement:
     enable: true
-    content: 记录学习，分享成长
+    content: 欢迎来到 Peter の 技术小屋！这里记录后端开发的点滴~
   card_recent_post:
     enable: true
     limit: 5
@@ -56,7 +56,9 @@ footer:
   owner:
     enable: true
     since: 2022
-  custom_text: <a target="_blank" rel="noopener" href="https://github.com/PeterGuy326">PeterGuy326</a>
+  custom_text: |
+    Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br>
+    <i class="fas fa-heart" style="color:#ff6b81"></i> Keep coding, keep learning
   copyright: true
 
 # Post
@@ -116,12 +118,12 @@ local_search:
   unescape: false
   CDN:
 
-# Index page - use Unsplash images for top banners
-index_img: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&h=600&fit=crop
-default_top_img: https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1600&h=600&fit=crop
-archive_img: https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1600&h=400&fit=crop
-tag_img: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1600&h=400&fit=crop
-category_img: https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1600&h=400&fit=crop
+# Index page - anime/illustration style banners (random anime art API)
+index_img: https://api.maho.cc/random-img/pc.php
+default_top_img: https://api.maho.cc/random-img/pc.php
+archive_img: https://api.maho.cc/random-img/pc.php
+tag_img: https://api.maho.cc/random-img/pc.php
+category_img: https://api.maho.cc/random-img/pc.php
 
 # Post cover
 cover:
@@ -130,11 +132,7 @@ cover:
   archives_enable: true
   position: both
   default_cover:
-    - https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=500&fit=crop
-    - https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&h=500&fit=crop
-    - https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=500&fit=crop
-    - https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=500&fit=crop
-    - https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&h=500&fit=crop
+    - https://api.maho.cc/random-img/pc.php
 
 # Page transition
 enter_transitions: true
