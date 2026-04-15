@@ -5,7 +5,7 @@ tags:
   - Mysql
 categories:
   - 数据库
-cover: https://api.maho.cc/random-img/pc.php
+cover: /img/cover.jpg
 ---
 
 ## 前言

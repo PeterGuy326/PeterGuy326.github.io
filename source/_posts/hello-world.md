@@ -5,7 +5,7 @@ tags:
   - Hexo
 categories:
   - 随笔
-cover: https://api.maho.cc/random-img/pc.php
+cover: /img/cover.jpg
 ---
 
 Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.

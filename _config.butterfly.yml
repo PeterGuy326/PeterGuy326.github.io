@@ -118,12 +118,12 @@ local_search:
   unescape: false
   CDN:
 
-# Index page - anime/illustration style banners (random anime art API)
-index_img: https://api.maho.cc/random-img/pc.php
-default_top_img: https://api.maho.cc/random-img/pc.php
-archive_img: https://api.maho.cc/random-img/pc.php
-tag_img: https://api.maho.cc/random-img/pc.php
-category_img: https://api.maho.cc/random-img/pc.php
+# Index page - custom cover
+index_img: /img/cover.jpg
+default_top_img: /img/cover.jpg
+archive_img: /img/cover.jpg
+tag_img: /img/cover.jpg
+category_img: /img/cover.jpg
 
 # Post cover
 cover:
@@ -132,7 +132,7 @@ cover:
   archives_enable: true
   position: both
   default_cover:
-    - https://api.maho.cc/random-img/pc.php
+    - /img/cover.jpg
 
 # Page transition
 enter_transitions: true
