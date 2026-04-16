@@ -132,12 +132,12 @@ cover:
   archives_enable: true
   position: both
   default_cover:
-    - https://picsum.photos/seed/cover1/800/400
-    - https://picsum.photos/seed/cover2/800/400
-    - https://picsum.photos/seed/cover3/800/400
-    - https://picsum.photos/seed/cover4/800/400
-    - https://picsum.photos/seed/cover5/800/400
-    - https://picsum.photos/seed/cover6/800/400
+    - https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop
+    - https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop
+    - https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&h=400&fit=crop
+    - https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&h=400&fit=crop
+    - https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop
+    - https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=400&fit=crop
 
 # Page transition
 enter_transitions: true
