@@ -6,7 +6,6 @@ tags:
   - InnoDB
 categories:
   - 数据库
-cover: /img/cover.jpg
 ---
 
 ## 不同类型的页

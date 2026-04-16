@@ -132,7 +132,12 @@ cover:
   archives_enable: true
   position: both
   default_cover:
-    - /img/cover.jpg
+    - https://picsum.photos/seed/cover1/800/400
+    - https://picsum.photos/seed/cover2/800/400
+    - https://picsum.photos/seed/cover3/800/400
+    - https://picsum.photos/seed/cover4/800/400
+    - https://picsum.photos/seed/cover5/800/400
+    - https://picsum.photos/seed/cover6/800/400
 
 # Page transition
 enter_transitions: true

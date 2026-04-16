@@ -5,7 +5,6 @@ tags:
   - Mysql
 categories:
   - 数据库
-cover: /img/cover.jpg
 ---
 
 ## 前言
