@@ -135,6 +135,10 @@ cover:
     - https://t.mwm.moe/fj
     - https://t.mwm.moe/pc
     - https://img.xjh.me/random_img.php?return=302
+    - https://api.mtyqx.cn/api/random.php
+    - https://www.loliapi.com/acg/
+    - https://api.yimian.xyz/img?type=moe&size=1920x1080
+    - https://img.xjh.me/random_img.php?type=bg&ctype=acg&return=302
 
 # Page transition
 enter_transitions: true
