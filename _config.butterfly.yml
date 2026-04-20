@@ -131,14 +131,65 @@ cover:
   aside_enable: true
   archives_enable: true
   position: both
+  # 漫画风格 / 纯风景场景 / 不出人物（尤其不出女性角色）
+  # 30+ 随机图源，最大程度避免封面重复
+  #
+  # --- alcy.cc 系列 ---
+  # fj=二次元风景  moemp=MC二次元  mp=MC高清  ysfj=原神风景
+  #
+  # --- 风景/背景专项 ---
+  # loliapi.com/bg       ACG纯风景背景
+  # xjh.me ctype=nature  自然实拍风景
+  # xjh.me ctype=acg     ACG背景图
+  # btstu fengjing       搏天风景壁纸
+  # eees.cc fengjing     EEE风景
+  # dongmanxingkong      动漫星空(多分辨率)
+  #
+  # --- 通用二次元壁纸 ---
+  # dmoe.cc      樱花API
+  # vvhan        韩小韩
+  # paugram      保罗壁纸
+  # yimian       呓喵酱壁纸
+  # aixiaowai    小歪系列
+  # 52ecy        阿珏背景
+  # gumengya     古梦动漫
   default_cover:
-    - https://t.mwm.moe/fj
-    - https://t.mwm.moe/pc
-    - https://img.xjh.me/random_img.php?return=302
-    - https://api.mtyqx.cn/api/random.php
-    - https://www.loliapi.com/acg/
+    # ── alcy.cc 风景系列 ──
+    - https://t.alcy.cc/fj
+    - https://t.alcy.cc/moemp
+    - https://t.alcy.cc/mp
+    - https://t.alcy.cc/ysfj
+    # ── 纯风景 / 背景专项 ──
+    - https://www.loliapi.com/bg/
+    - https://img.xjh.me/random_img.php?return=302&type=bg&ctype=nature
+    - https://img.xjh.me/random_img.php?return=302&type=bg&ctype=acg
+    - https://api.btstu.cn/sjbz/api.php?lx=fengjing&format=images
+    - https://tuapi.eees.cc/api.php?category=fengjing&type=302
+    - https://api.dongmanxingkong.com/suijitupian/acg/1080p/index.php
+    - https://api.dongmanxingkong.com/suijitupian/acg/4k/index.php
+    # ── 动漫壁纸（风景向为主）──
+    - https://api.yimian.xyz/img?type=wallpaper&size=1920x1080
     - https://api.yimian.xyz/img?type=moe&size=1920x1080
-    - https://img.xjh.me/random_img.php?type=bg&ctype=acg&return=302
+    - https://www.dmoe.cc/random.php
+    - https://api.vvhan.com/api/acgimg
+    - https://api.paugram.com/wallpaper/
+    - https://api.aixiaowai.cn/gqapi/gqapi.php
+    - https://api.aixiaowai.cn/mcapi/mcapi.php
+    - https://api.aixiaowai.cn/api/api.php
+    - https://random.52ecy.cn/randbg.php
+    - https://api.gumengya.com/Api/DmImg?format=image
+    - https://api.ghser.com/random/api.php
+    # ── 搏天动漫 / EEE动漫 ──
+    - https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images
+    - https://tuapi.eees.cc/api.php?category=dongman&type=302
+    # ── 高清壁纸补充 ──
+    - https://api.aixiaowai.cn/api/api2.php
+    - https://api.aixiaowai.cn/mcapi/mcapi2.php
+    - https://random.52ecy.cn/random.php
+    - https://api.suyanw.cn/api/comic/api.php
+    - https://api.horosama.com/random.php
+    - https://ybapi.cn/API/dmt.php
+    - https://api.dongmanxingkong.com/suijitupian/acg/2k/index.php
 
 # Page transition
 enter_transitions: true
