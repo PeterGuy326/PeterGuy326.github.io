@@ -391,6 +391,66 @@ claude
 
 ---
 
+## 国产大模型选型对比：DeepSeek 之外，还有 4 家值得了解
+
+第五步介绍了用 DeepSeek 接 Claude Code，但国产 AI 模型现在百花齐放。如果想横向对比、按场景选型，下面整理了 5 家最主流的（数据截至 2026 年 5 月）。
+
+### 一、五家 API 单价对比
+
+| 模型 | 输入价 | 输出价 | 上下文 | 一句话定位 |
+|------|--------|--------|--------|------------|
+| **DeepSeek V4 Pro**（折扣价至 5/31）| $0.44/M | $0.87/M | 1M | 编码顶级 + Claude Code 原生兼容 |
+| **DeepSeek V4 Flash** | $0.14/M | $0.28/M | 1M | 上一个的便宜版，跑简单任务能再省 4 倍 |
+| **Kimi K2.6**（Moonshot AI）| $0.60/M | $2.50/M | 256K | Agent Swarm + 长文档 + 工具调用 |
+| **Qwen3-Coder Next**（阿里）| $0.20/M | $1.50/M | 256K（64K 输出）| 阿里生态深度集成 + 仓库级编码 |
+| **MiniMax M2.7** | $0.30/M | $1.20/M | 205K | 多模态强（海螺语音 / 视频生成） |
+| **智谱 GLM-4.7** | ¥2/M | ¥4/M | 200K | SWE-Bench 国内开源第一 |
+| **智谱 GLM Coding Lite**（月订阅） | **¥49/月**（包月） | - | - | 约 3× Claude Pro 用量，支持 Claude Code / Cline / Cursor |
+
+> 💡 1 M tokens = 100 万 token；1 美元 ≈ 7.2 元。以上为官方公开 pay-as-you-go 价，实际还有折扣 / 缓存命中价 / 阶梯计费 / 月订阅等多种结算方式。
+
+### 二、个人推荐组合：DeepSeek V4 Pro 主力 + Kimi K2.6 辅助
+
+我自己日常用这两家组合，各承担不同任务：
+
+**🟢 DeepSeek V4 Pro 当主力**
+- **Anthropic 兼容 API** —— 配 Claude Code 改 6 个环境变量就跑（详见第五步），**其他 4 家都需要用 [claude-code-router](https://github.com/musistudio/claude-code-router) 这类代理工具中转**，DeepSeek 是唯一开箱即用的
+- 编码 Benchmark 国产顶尖（SWE-Bench Verified 80.6% / LiveCodeBench 93.5%）
+- 1M 上下文吃整个中型项目不眨眼
+- 价格 ≈ Claude Opus 4.7 的 1/15
+- MIT 协议开源，理论可自部署
+
+**🟡 Kimi K2.6 当辅助**
+- 国产**长文档 + Agent 任务能力**第一档
+- Agent Swarm 支持 300 个并行 sub-agents（适合长流程自动化、文档生成）
+- 中文理解和工具调用顺滑度比 DeepSeek 略好
+- 接入：OpenAI 兼容，`base_url` 换为 `https://api.moonshot.cn/v1` 即可
+
+### 三、按场景选型速查
+
+| 场景 | 推荐 | 为什么 |
+|------|------|--------|
+| 日常 AI 编码主力 | **DeepSeek V4 Pro** | Claude Code 原生兼容，性价比天花板 |
+| 大量长文档 / 报告处理 | **Kimi K2.6** | 256K 上下文 + Agent Swarm |
+| 阿里云生态项目 | **Qwen3-Coder Next** | 百炼新用户送 7000 万 免费 token |
+| 多模态（语音 / 视频）| **MiniMax M2.7 / M1** | M1 1M 上下文 + 海螺视频生成 |
+| 想用包月不想算 token 账 | **智谱 GLM Coding Lite** | ¥49/月，支持主流 AI 编程工具 |
+| 极致省钱跑小任务 | **DeepSeek V4 Flash** | $0.14/M 输入，最便宜的非订阅方案 |
+
+### 四、各家 API 控制台入口
+
+| 厂商 | 控制台 |
+|------|--------|
+| DeepSeek | https://platform.deepseek.com/ |
+| Kimi（Moonshot AI）| https://platform.moonshot.cn/ |
+| 通义千问（阿里百炼）| https://bailian.console.aliyun.com/ |
+| MiniMax | https://platform.minimaxi.com/ |
+| 智谱 GLM | https://bigmodel.cn/ |
+
+> ⚠️ **没必要一开始全试**。先把 DeepSeek 接 Claude Code 用熟，遇到具体场景（长文档、多模态、月订阅心智）再按需切换。**多家并行不会让代码写得更快，只会让账单和心智负担更乱。**
+
+---
+
 ## 预算预估：月度大致花多少钱
 
 光看工具列表容易低估成本，光看 API 文档又容易吓到。这一节按**学习入门 / 中度日常 / 重度高频** 三档给出真实账单参考，所有单价以 2026 年 5 月数据为准。
