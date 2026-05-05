@@ -1,8 +1,8 @@
 ---
 title: Windows 下从零配置 AI 开发环境：Qoder + QoderWork + WSL + Claude Code + DeepSeek V4 Pro
 date: 2026-05-05T16:00:00+08:00
-cover: /img/covers/claude-code-ubuntu.jpg
-top_img: /img/covers/claude-code-ubuntu.jpg
+cover: /img/covers/claude-code-terminal.jpg
+top_img: /img/covers/claude-code-terminal.jpg
 tags:
   - WSL
   - Claude Code
