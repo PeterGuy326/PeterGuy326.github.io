@@ -1,6 +1,8 @@
 ---
 title: Windows 本地大模型部署完全指南：Ollama + LM Studio + 接入 Claude Code
 date: 2026-05-05T17:00:00+08:00
+cover: /img/covers/ollama-og.png
+top_img: /img/covers/ollama-og.png
 tags:
   - 本地大模型
   - Ollama
