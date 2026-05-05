@@ -118,67 +118,21 @@ local_search:
   unescape: false
   CDN:
 
-# Index page - custom cover
-# 站点级 banner：宝可梦官方艺术图（PokéAPI 官方 sprite 仓库，稳定 GitHub raw CDN）
-# 25=皮卡丘  150=超梦  6=喷火龙  448=路卡利欧  493=阿尔宙斯
-index_img: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png
-default_top_img: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png
-archive_img: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png
-tag_img: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png
-category_img: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png
+# Index page - custom cover（统一视觉识别：本地高清小屋风景图）
+index_img: /img/cover.jpg
+default_top_img: /img/cover.jpg
+archive_img: /img/cover.jpg
+tag_img: /img/cover.jpg
+category_img: /img/cover.jpg
 
-# Post cover
+# Post cover（统一视觉识别：所有文章封面用同一张本地小屋风景图）
 cover:
   index_enable: true
   aside_enable: true
   archives_enable: true
   position: both
-  # 宝可梦官方艺术图随机池
-  # 数据源：PokéAPI 官方 sprite 仓库（GitHub raw，稳定 CDN，高清透明 PNG，475x475）
-  # https://github.com/PokeAPI/sprites
-  # 涵盖：1-9 代御三家 + 国民级宝可梦 + 传说/神兽 + 高人气进化型，共 30 只
   default_cover:
-    # ── 一代御三家 + 终极进化 + 皮神 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png    # 妙蛙种子
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png    # 小火龙
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png    # 喷火龙
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png    # 杰尼龟
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png    # 水箭龟
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png   # 皮卡丘
-    # ── 一代国民 + 神兽 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png   # 耿鬼
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png  # 暴鲤龙
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png  # 伊布
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png  # 卡比兽
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png  # 快龙
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png  # 超梦
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png  # 梦幻
-    # ── 二代经典 + 神兽 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png  # 太阳精灵
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png  # 月亮精灵
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/248.png  # 班基拉斯
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png  # 洛奇亚
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png  # 凤王
-    # ── 三代神兽 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png  # 烈空坐
-    # ── 四代御三家终极进化 + 神兽 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png  # 烈咬陆鲨
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png  # 路卡利欧
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png  # 骑拉帝纳
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png  # 阿尔宙斯
-    # ── 五代神兽 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/643.png  # 莱希拉姆
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/644.png  # 捷克罗姆
-    # ── 六代神兽 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png  # 哲尔尼亚斯
-    # ── 七代神兽 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/800.png  # 奈克洛兹玛
-    # ── 八代神兽 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/890.png  # 无极汰那
-    # ── 九代御三家终极进化 ──
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/908.png  # 庆祝之歌
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/911.png  # 骨纹巨声鳄
-    - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/914.png  # 朱红蓝鹂
+    - /img/cover.jpg
 
 # Page transition
 enter_transitions: true
