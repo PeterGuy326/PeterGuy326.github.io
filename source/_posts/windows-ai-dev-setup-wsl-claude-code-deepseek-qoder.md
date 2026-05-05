@@ -19,13 +19,93 @@ categories:
 
 总的安装顺序：
 
-1. **Qoder**：阿里出的 AI IDE，Windows 桌面 GUI 工具，**先装这个，后面有问题先问它**
-2. **QoderWork**：Qoder 团队出的桌面端 AI Agent，**邀请制，先提交申请并行等待**
-3. **WSL 2**：在 Windows 里装一个 Ubuntu 子系统，是后面所有 Linux 命令行工具的地基
-4. **Claude Code**：Anthropic 官方的命令行 AI 编码助手
-5. **接入 DeepSeek V4 Pro**：把 Claude Code 的"大脑"换成 DeepSeek，省钱
+0. **[Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)**（前置）：解决 GitHub / Anthropic 登不上的问题，**这是先决条件，所有后续都建立在能联网的基础上**
+1. **[Qoder](https://qoder.com/)**：阿里出的 AI IDE，Windows 桌面 GUI 工具，**先装这个，后面有问题先问它**
+2. **[QoderWork](https://qoder.com/qoderwork)**（**可选**）：Qoder 团队出的桌面端 AI Agent，**邀请制，提交申请后直接跳到第三步，不要卡在这里等**
+3. **[WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install)**：在 Windows 里装一个 Ubuntu 子系统，是后面所有 Linux 命令行工具的地基
+4. **[Claude Code](https://github.com/anthropics/claude-code)**：[Anthropic](https://www.anthropic.com/) 官方的命令行 AI 编码助手
+5. **接入 [DeepSeek V4 Pro](https://platform.deepseek.com/)**：把 Claude Code 的"大脑"换成 [DeepSeek](https://github.com/deepseek-ai)，省钱
 
-预计耗时 1.5~2 小时（包含等下载和申请邀请的时间）。
+预计耗时 2~2.5 小时（包含等下载和申请邀请的时间）。
+
+---
+
+## 第零步：网络环境准备（前置：解决登不上 GitHub / Anthropic 的问题）
+
+> ⚠️ 这一步是后面一切的前提。如果你已经能流畅访问 https://github.com/ 和 https://docs.anthropic.com/ ，可以跳过本节直接到第一步。
+
+### 为什么需要
+
+后面要用到的几个核心资源在国内默认网络下可能访问不畅：
+- **GitHub**（Claude Code、nvm、Clash Verge Rev 本身的下载源）
+- **Anthropic 官网/文档**（Claude Code 登录与文档）
+- **npm registry 的某些包**（少量包可能从 GitHub raw 拉资源）
+- **Hugging Face / Docker Hub**（后面学习阶段会用到）
+
+DeepSeek、Qoder、QoderWork 这三个国内可直连，没问题。
+
+### 工具：[Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)
+
+[Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) 是目前 Windows 上最主流的开源代理客户端（GPL-3.0 协议），基于 Mihomo 内核，UI 友好，支持订阅链接一键导入。
+
+### 离线安装（GitHub 登不上时用国内镜像）
+
+**官方 Release 直链**（能上 GitHub 时优先用这个，最新最干净）：
+- https://github.com/clash-verge-rev/clash-verge-rev/releases/latest
+
+**国内镜像加速**（GitHub 拉不动时备用）：
+在原 release 链接前加上 `https://ghproxy.com/` 或 `https://gh-proxy.com/`，例如：
+
+```
+https://gh-proxy.com/https://github.com/clash-verge-rev/clash-verge-rev/releases/latest
+```
+
+镜像服务有时会失效，遇到挂了换一个：
+- ghproxy.com / gh-proxy.com / mirror.ghproxy.com / ghps.cc
+
+下载 Windows 安装包（`Clash.Verge_x.x.x_x64-setup.exe`），双击安装即可。
+
+### 配置：导入订阅链接 → 启用系统代理
+
+1. 打开 Clash Verge Rev
+2. 左侧"订阅"→ 粘贴你的订阅链接 → "导入"
+3. "节点"页选一个延迟低的
+4. 顶部"系统代理"开关打开（这一步是关键，浏览器/终端才走代理）
+5. 浏览器打开 https://github.com/ 测试，能秒开就成功
+
+### 选机场（订阅链接来源）的判断标准
+
+订阅链接需要从付费的代理服务（俗称"机场"）购买。**这部分博客不便点名具体服务**（涉及合规、跑路风险、服务质量随时变化），但可以给你一份避坑标准：
+
+| 维度 | 怎么看 |
+|------|--------|
+| **运营年限** | ≥ 2 年的相对稳定，新开 6 个月内的别碰（跑路高峰期） |
+| **用户规模** | 选用户多的，节点压力分散、问题反馈快 |
+| **支持协议** | 至少支持 Vless / Trojan / Hysteria2，老协议（SS、V2Ray）已过时 |
+| **价格档位** | 月付 10~30 元是合理区间，太便宜（< 5 元）通常是低带宽超售 |
+| **退款政策** | 有"先付后退"或试用机制的优先 |
+| **官网/客服** | TG 群活跃、有正式工单系统的 > 只有客服 QQ 的 |
+| **流量规则** | "不限速" 字眼大多是营销，看清月流量配额（100GB+ 够日常 AI 编码用） |
+
+> 在身边问就读 / 工作过 1 年以上的同学/同事推荐，比看广告靠谱十倍。
+
+### 终端代理（在 WSL Ubuntu 里也走代理）
+
+Clash Verge 默认只代理 Windows 主机的浏览器请求，**WSL 里的 `apt`、`npm`、`git` 默认不走代理**，需要手动配置。把这段加到 `~/.bashrc` 末尾（端口默认 7897，看你的 Clash Verge"设置 → 端口"）：
+
+```bash
+# Clash Verge 代理（端口看自己 Verge 设置）
+alias proxy_on='export http_proxy=http://172.17.0.1:7897 && export https_proxy=$http_proxy && export all_proxy=$http_proxy'
+alias proxy_off='unset http_proxy https_proxy all_proxy'
+```
+
+> WSL 里访问 Windows 主机的 IP 不是 127.0.0.1，是 `172.17.0.1`（或在 WSL 里跑 `cat /etc/resolv.conf | grep nameserver` 看具体地址）。
+
+要走代理时跑 `proxy_on`，不需要时跑 `proxy_off`。
+
+📚 **官方仓库**：
+- Clash Verge Rev：https://github.com/clash-verge-rev/clash-verge-rev
+- Mihomo 内核：https://github.com/MetaCubeX/mihomo
 
 ---
 
@@ -70,7 +150,9 @@ categories:
 
 ---
 
-## 第二步：申请 QoderWork（桌面 AI Agent）
+## 第二步（可选）：申请 QoderWork（桌面 AI Agent）
+
+> 🟡 **本节为可选**。QoderWork 是邀请制，没法立刻装。**提交申请后直接跳到第三步**，不要卡在这里等。等邀请到了再回来看本节配置。如果你只想尽快上手，第二步可以完整跳过。
 
 ### QoderWork 是什么
 
@@ -344,14 +426,19 @@ claude
 
 ## 一页索引（懒人速查）
 
-| 工具 | 官方入口 |
+| 工具 | 官网 / 官方仓库 |
 |------|---------|
+| Clash Verge Rev（代理客户端）| https://github.com/clash-verge-rev/clash-verge-rev |
 | Qoder 官网 | https://qoder.com/ |
 | Qoder 下载 | https://qoder.com/en/download |
 | QoderWork 主页 | https://qoder.com/qoderwork |
 | QoderWork 介绍博客 | https://qoder.com/blog/qoder-work |
 | WSL 安装 | https://learn.microsoft.com/en-us/windows/wsl/install |
+| nvm（Node 版本管理）| https://github.com/nvm-sh/nvm |
+| Claude Code GitHub | https://github.com/anthropics/claude-code |
 | Claude Code 文档 | https://code.claude.com/docs/en/overview |
+| Anthropic 官网 | https://www.anthropic.com/ |
+| DeepSeek GitHub | https://github.com/deepseek-ai |
 | DeepSeek 平台 | https://platform.deepseek.com/ |
 | DeepSeek + Claude Code 集成 | https://api-docs.deepseek.com/quick_start/agent_integrations/claude_code |
 | DeepSeek 定价 | https://api-docs.deepseek.com/quick_start/pricing |

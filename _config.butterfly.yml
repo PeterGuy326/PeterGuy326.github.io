@@ -125,31 +125,34 @@ archive_img: /img/cover.jpg
 tag_img: /img/cover.jpg
 category_img: /img/cover.jpg
 
-# Post cover（混合源：摄影级 Bing/Picsum + 验证可用的二次元风景）
-# 选型逻辑：摄影级图片零品味风险，二次元风景做风格调味，全部已验证 200 OK
+# Post cover（自托管池：从 Bing 每日壁纸编译期下载 20 张高清摄影图固化到仓库）
+# 选型逻辑：第三方运行时 API 偶发性限流/404 不可避免，改为自托管 → 永远 200 OK
 cover:
   index_enable: true
   aside_enable: true
   archives_enable: true
   position: both
   default_cover:
-    # ── Bing 每日壁纸：国家地理级风景摄影，每日刷新 ──
-    - https://bing.img.run/1920x1080.php
-    - https://bing.img.run/uhd.php
-    - https://bing.img.run/rand.php
-    # ── Lorem Picsum：Unsplash 派生的摄影图床，纯随机 ──
-    - https://picsum.photos/1920/1080?random=1
-    - https://picsum.photos/1920/1080?random=2
-    - https://picsum.photos/1920/1080?random=3
-    - https://picsum.photos/1920/1080?random=4
-    - https://picsum.photos/1920/1080?random=5
-    - https://picsum.photos/1920/1080?random=6
-    - https://picsum.photos/1920/1080?random=7
-    - https://picsum.photos/1920/1080?random=8
-    # ── alcy.cc 二次元风景（webp 高清，已逐个验证）──
-    - https://t.alcy.cc/fj      # 二次元风景
-    - https://t.alcy.cc/moemp   # MC 二次元
-    - https://t.alcy.cc/pc      # PC 高清壁纸
+    - /img/covers/bing-01.jpg
+    - /img/covers/bing-02.jpg
+    - /img/covers/bing-03.jpg
+    - /img/covers/bing-04.jpg
+    - /img/covers/bing-05.jpg
+    - /img/covers/bing-06.jpg
+    - /img/covers/bing-07.jpg
+    - /img/covers/bing-08.jpg
+    - /img/covers/bing-09.jpg
+    - /img/covers/bing-10.jpg
+    - /img/covers/bing-11.jpg
+    - /img/covers/bing-12.jpg
+    - /img/covers/bing-13.jpg
+    - /img/covers/bing-14.jpg
+    - /img/covers/bing-15.jpg
+    - /img/covers/bing-16.jpg
+    - /img/covers/bing-17.jpg
+    - /img/covers/bing-18.jpg
+    - /img/covers/bing-19.jpg
+    - /img/covers/bing-20.jpg
 
 # Page transition
 enter_transitions: true
