@@ -125,14 +125,31 @@ archive_img: /img/cover.jpg
 tag_img: /img/cover.jpg
 category_img: /img/cover.jpg
 
-# Post cover（统一视觉识别：所有文章封面用同一张本地小屋风景图）
+# Post cover（混合源：摄影级 Bing/Picsum + 验证可用的二次元风景）
+# 选型逻辑：摄影级图片零品味风险，二次元风景做风格调味，全部已验证 200 OK
 cover:
   index_enable: true
   aside_enable: true
   archives_enable: true
   position: both
   default_cover:
-    - /img/cover.jpg
+    # ── Bing 每日壁纸：国家地理级风景摄影，每日刷新 ──
+    - https://bing.img.run/1920x1080.php
+    - https://bing.img.run/uhd.php
+    - https://bing.img.run/rand.php
+    # ── Lorem Picsum：Unsplash 派生的摄影图床，纯随机 ──
+    - https://picsum.photos/1920/1080?random=1
+    - https://picsum.photos/1920/1080?random=2
+    - https://picsum.photos/1920/1080?random=3
+    - https://picsum.photos/1920/1080?random=4
+    - https://picsum.photos/1920/1080?random=5
+    - https://picsum.photos/1920/1080?random=6
+    - https://picsum.photos/1920/1080?random=7
+    - https://picsum.photos/1920/1080?random=8
+    # ── alcy.cc 二次元风景（webp 高清，已逐个验证）──
+    - https://t.alcy.cc/fj      # 二次元风景
+    - https://t.alcy.cc/moemp   # MC 二次元
+    - https://t.alcy.cc/pc      # PC 高清壁纸
 
 # Page transition
 enter_transitions: true
