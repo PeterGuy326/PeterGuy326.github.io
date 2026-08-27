@@ -1,0 +1,36 @@
+/* Footer — softer, blends with cover palette */
+#footer {
+  background: linear-gradient(180deg, rgba(30, 58, 95, 0.55) 0%, rgba(20, 40, 70, 0.85) 100%) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #e8eef7 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#footer::before {
+  background: transparent !important;
+}
+
+#footer #footer-wrap {
+  color: #e8eef7 !important;
+  text-shadow: none;
+}
+
+#footer a {
+  color: #ffd27a !important;
+  transition: color 0.2s ease;
+}
+
+#footer a:hover {
+  color: #ffb347 !important;
+}
+
+#footer .footer-copyright,
+#footer .footer_custom_text {
+  color: #e8eef7 !important;
+  opacity: 0.92;
+}
+
+[data-theme="dark"] #footer {
+  background: linear-gradient(180deg, rgba(15, 22, 36, 0.75) 0%, rgba(10, 15, 25, 0.92) 100%) !important;
+}

@@ -1,0 +1,188 @@
+# Navigation
+nav:
+  logo:
+  display_title: true
+  fixed: false
+
+menu:
+  首页: / || fas fa-home
+  软考: /categories/软考/ || fas fa-graduation-cap
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+
+# Code Blocks
+highlight_theme: mac
+highlight_copy: true
+highlight_lang: true
+highlight_height_limit: 300
+
+# Social
+social:
+  fab fa-github: https://github.com/PeterGuy326 || Github
+
+# Avatar
+avatar:
+  img: https://avatars.githubusercontent.com/u/47820304?v=4
+  effect: true
+
+# Aside
+aside:
+  enable: true
+  card_author:
+    enable: true
+    description: Debug the world, one line at a time.
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/PeterGuy326
+  card_announcement:
+    enable: true
+    content: 欢迎来到 Peter の 技术小屋！这里记录后端开发的点滴~
+  card_recent_post:
+    enable: true
+    limit: 5
+  card_categories:
+    enable: true
+  card_tags:
+    enable: true
+    limit: 20
+  card_archives:
+    enable: true
+    limit: 6
+
+# Footer
+footer:
+  owner:
+    enable: true
+    since: 2022
+  custom_text: |
+    Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br>
+    <i class="fas fa-heart" style="color:#ff6b81"></i> Keep coding, keep learning
+  copyright: true
+
+# Post
+post_meta:
+  page:
+    date_type: created
+    categories: true
+    tags: true
+  post:
+    date_type: both
+    categories: true
+    tags: true
+
+toc:
+  post: true
+  page: false
+  number: true
+
+# Post Copyright
+post_copyright:
+  enable: true
+  decode: false
+  author_href: https://github.com/PeterGuy326
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# Theme color
+theme_color:
+  enable: true
+  main: "#49B1F5"
+
+# Beautify
+beautify:
+  enable: true
+  field: post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: "#F47466"
+
+# Font
+font:
+  global-font-size:
+  code-font-size:
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+
+# Dark mode
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: 1
+
+# Local search
+local_search:
+  enable: true
+  preload: false
+  top_n_per_article: 1
+  unescape: false
+  CDN:
+
+# Index page - custom cover（统一视觉识别：本地高清小屋风景图）
+index_img: /img/cover.jpg
+default_top_img: /img/cover.jpg
+archive_img: /img/cover.jpg
+tag_img: /img/cover.jpg
+category_img: /img/cover.jpg
+
+# Post cover（自托管池：从 Bing 每日壁纸编译期下载 20 张高清摄影图固化到仓库）
+# 选型逻辑：第三方运行时 API 偶发性限流/404 不可避免，改为自托管 → 永远 200 OK
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  position: both
+  default_cover:
+    - /img/covers/bing-01.jpg
+    - /img/covers/bing-02.jpg
+    - /img/covers/bing-03.jpg
+    - /img/covers/bing-04.jpg
+    - /img/covers/bing-05.jpg
+    - /img/covers/bing-06.jpg
+    - /img/covers/bing-07.jpg
+    - /img/covers/bing-08.jpg
+    - /img/covers/bing-09.jpg
+    - /img/covers/bing-10.jpg
+    - /img/covers/bing-11.jpg
+    - /img/covers/bing-12.jpg
+    - /img/covers/bing-13.jpg
+    - /img/covers/bing-14.jpg
+    - /img/covers/bing-15.jpg
+    - /img/covers/bing-16.jpg
+    - /img/covers/bing-17.jpg
+    - /img/covers/bing-18.jpg
+    - /img/covers/bing-19.jpg
+    - /img/covers/bing-20.jpg
+
+# Page transition
+enter_transitions: true
+
+# Inject custom CSS/JS
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css">
+  bottom:
+
+# Preloader
+preloader:
+  enable: true
+  source: 1
+
+# Wordcount (if plugin installed)
+wordcount:
+  enable: false
+
+# Subtitle on index page
+subtitle:
+  enable: true
+  effect: true
+  typed_option:
+    loop: true
+    typeSpeed: 100
+    backSpeed: 50
+  source: 1
+  sub:
+    - 学无止境，知行合一
+    - Stay hungry, stay foolish
+    - Code is poetry

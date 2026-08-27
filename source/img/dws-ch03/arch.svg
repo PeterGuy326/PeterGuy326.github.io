@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="660" viewBox="0 0 1040 660" font-family="-apple-system,Segoe UI,Helvetica,Arial,PingFang SC,Microsoft YaHei,sans-serif">
+  <defs>
+    <style>
+      .layer  { fill:#f7f9fc; stroke:#cfd8e3; stroke-width:1.5; rx:12; }
+      .ltitle { font-size:18px; font-weight:700; fill:#1f2d3d; }
+      .ltag   { font-size:12px; fill:#8a97a8; }
+      .box    { fill:#ffffff; stroke:#b9c4d4; stroke-width:1.2; rx:8; }
+      .boxhot { fill:#fff4e6; stroke:#f0a14b; stroke-width:1.6; rx:8; }
+      .btxt   { font-size:14px; fill:#2c3a4b; }
+      .bsub   { font-size:11.5px; fill:#7b8794; }
+      .arrow  { stroke:#9aa7b8; stroke-width:2; marker-end:url(#ah); fill:none; }
+      .note   { font-size:12px; fill:#c0392b; font-weight:600; }
+    </style>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa7b8"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="34" font-size="22" font-weight="700" fill="#1f2d3d">企业答疑机器人 · 四层架构（dws）</text>
+
+  <!-- Layer 1: 接入层 -->
+  <rect class="layer" x="30" y="56" width="980" height="92" rx="12"/>
+  <text class="ltitle" x="48" y="86">① 接入层</text>
+  <text class="ltag"   x="48" y="106">已就绪 · PR #407</text>
+  <rect class="box" x="250" y="74" width="240" height="56" rx="8"/>
+  <text class="btxt" x="270" y="98">dws connect bot create</text>
+  <text class="bsub" x="270" y="116">建号 → 拿 clientId/secret</text>
+  <rect class="box" x="540" y="74" width="240" height="56" rx="8"/>
+  <text class="btxt" x="560" y="98">DWClient Stream</text>
+  <text class="bsub" x="560" y="116">订阅 TOPIC_ROBOT · 收→回</text>
+  <rect class="box" x="820" y="74" width="170" height="56" rx="8"/>
+  <text class="btxt" x="840" y="98">钉钉群 / 单聊</text>
+  <text class="bsub" x="840" y="116">用户在这里提问</text>
+
+  <line class="arrow" x1="520" y1="148" x2="520" y2="176"/>
+  <text x="530" y="168" font-size="12" fill="#7b8794">用户问题进来</text>
+
+  <!-- Layer 2: 编排层 -->
+  <rect class="layer" x="30" y="180" width="980" height="92" rx="12"/>
+  <text class="ltitle" x="48" y="210">② 编排层</text>
+  <text class="ltag"   x="48" y="230">agent 逻辑</text>
+  <rect class="box" x="250" y="198" width="170" height="56" rx="8"/>
+  <text class="btxt" x="270" y="222">意图识别</text>
+  <text class="bsub" x="270" y="240">该问谁 / 查哪层</text>
+  <rect class="box" x="440" y="198" width="170" height="56" rx="8"/>
+  <text class="btxt" x="460" y="222">选检索源</text>
+  <text class="bsub" x="460" y="240">按命中逐层下钻</text>
+  <rect class="box" x="630" y="198" width="170" height="56" rx="8"/>
+  <text class="btxt" x="650" y="222">拼上下文 + 生成</text>
+  <text class="bsub" x="650" y="240">带引用回答</text>
+  <rect class="box" x="820" y="198" width="170" height="56" rx="8"/>
+  <text class="btxt" x="840" y="222">按提问人身份</text>
+  <text class="bsub" x="840" y="240">约束可见范围</text>
+
+  <line class="arrow" x1="520" y1="272" x2="520" y2="300"/>
+  <text x="530" y="292" font-size="12" fill="#7b8794">检索请求</text>
+
+  <!-- Layer 3: 检索层 -->
+  <rect class="layer" x="30" y="304" width="980" height="150" rx="12"/>
+  <text class="ltitle" x="48" y="334">③ 检索层</text>
+  <text class="ltag"   x="48" y="354">三层渐进 · 叠加</text>
+
+  <rect class="boxhot" x="250" y="322" width="240" height="116" rx="8"/>
+  <text class="btxt" x="270" y="348" font-weight="700">Layer 1 · aisearch</text>
+  <text class="bsub" x="270" y="370">dws aisearch enterprise</text>
+  <text class="bsub" x="270" y="388">开箱即用的企业语义检索</text>
+  <text class="bsub" x="270" y="406">天然带权限隔离</text>
+  <text class="note" x="270" y="426">默认先走这层</text>
+
+  <rect class="box" x="510" y="322" width="240" height="116" rx="8"/>
+  <text class="btxt" x="530" y="348" font-weight="700">Layer 2 · 结构化精取</text>
+  <text class="bsub" x="530" y="370">doc read / wiki doc</text>
+  <text class="bsub" x="530" y="388">minutes summary / chat</text>
+  <text class="bsub" x="530" y="406">命中后取全文上下文</text>
+
+  <rect class="box" x="770" y="322" width="220" height="116" rx="8"/>
+  <text class="btxt" x="790" y="348" font-weight="700">Layer 3 · 专业 RAG</text>
+  <text class="bsub" x="790" y="370">外接向量库</text>
+  <text class="bsub" x="790" y="388">仅前两层不够时上</text>
+  <text class="bsub" x="790" y="406">需自己重建 ACL</text>
+
+  <line class="arrow" x1="520" y1="454" x2="520" y2="482"/>
+
+  <!-- Layer 4: 知识源 -->
+  <rect class="layer" x="30" y="486" width="980" height="120" rx="12"/>
+  <text class="ltitle" x="48" y="516">④ 知识源</text>
+  <rect class="box" x="250" y="504" width="150" height="40" rx="8"/><text class="btxt" x="266" y="529">钉钉文档</text>
+  <rect class="box" x="410" y="504" width="150" height="40" rx="8"/><text class="btxt" x="426" y="529">知识库 Wiki</text>
+  <rect class="box" x="570" y="504" width="150" height="40" rx="8"/><text class="btxt" x="586" y="529">听记纪要</text>
+  <rect class="box" x="730" y="504" width="120" height="40" rx="8"/><text class="btxt" x="746" y="529">群消息 IM</text>
+  <rect class="box" x="860" y="504" width="130" height="40" rx="8"/><text class="btxt" x="876" y="529">云盘附件</text>
+  <rect class="box" x="250" y="554" width="310" height="40" rx="8"/><text class="btxt" x="266" y="579">本地代码 / 内部 SOP（钉钉里没有的）</text>
+  <rect class="box" x="570" y="554" width="420" height="40" rx="8"/><text class="btxt" x="586" y="579">向量库（Layer 3 才需要，钉钉资产同步进去）</text>
+
+  <text x="30" y="640" font-size="13" fill="#c0392b" font-weight="600">权限红线：每一层都以"提问人身份"约束可见范围 —— Layer 1/2 钉钉自动做，Layer 3 要自己补，否则越权泄密。</text>
+</svg>
